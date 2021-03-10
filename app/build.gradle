@@ -1,0 +1,79 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.example.luokaixuan.android2droid201806050939"
+        minSdkVersion 16
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            abiFilters'armeabi-v7a','x86'
+        }
+        flavorDimensions "1"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+
+    allprojects {
+        repositories {
+            jcenter()
+        }
+    }
+
+    //配置资源文件路径，可动态指定不同版本资源文件
+    sourceSets {
+        main {
+            jniLibs.srcDir 'src/main/jniLibs'
+        }
+    }
+
+    productFlavors {
+        all32 { minSdkVersion 14 }
+        all64 { minSdkVersion 21 }
+        // armv5 {}
+        // armv7a {}
+        // arm64 { minSdkVersion 21 }
+        // x86 {}
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+    implementation 'com.android.support:design:27.1.1'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    implementation 'de.mrmaffen:libvlc-android:2.1.12@aar'
+
+    implementation 'org.greenrobot:eventbus:3.0.0'
+
+    implementation project(':ijkplayer-java')
+    implementation project(':ijkplayer-exo')
+
+    all32Implementation project(':ijkplayer-armv5')
+    all32Implementation project(':ijkplayer-armv7a')
+    all32Implementation project(':ijkplayer-x86')
+
+    all64Implementation project(':ijkplayer-armv5')
+    all64Implementation project(':ijkplayer-armv7a')
+    all64Implementation project(':ijkplayer-arm64')
+    all64Implementation project(':ijkplayer-x86')
+    all64Implementation project(':ijkplayer-x86_64')
+
+}

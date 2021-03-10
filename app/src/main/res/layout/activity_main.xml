@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/main_server_bt2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:text="同屏输出端" />
+
+        <Button
+            android:id="@+id/main_server_bt5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:text="同屏输出服务端2" />
+
+        <Button
+            android:id="@+id/main_server_bt3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:text="同屏输出端 udp " />
+
+        <EditText
+            android:id="@+id/main_server_ip_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:hint="请输入服务端的IP 例: 192.168.3.1" />
+
+        <Button
+            android:id="@+id/main_client_bt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:text="同屏接收端 tcp " />
+
+        <Button
+            android:id="@+id/main_client_bt_save_2_local"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:text="同屏接收端 tcp 文件存到本地" />
+
+        <Button
+            android:id="@+id/main_client_bt2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:text="同屏接收端 tcp Textureview" />
+
+        <Button
+            android:id="@+id/main_client_bt3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:text="同屏接收端 tcp vlc " />
+
+        <Button
+            android:id="@+id/main_client_bt5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:text="同屏接收端 5 udp surface " />
+
+        <Button
+            android:id="@+id/main_client_bt6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:text="同屏接收端 tcp 6 texture " />
+
+        <Button
+            android:id="@+id/main_client_bt7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:text="同屏接收端 udp Texture 7 " />
+
+        <Button
+            android:id="@+id/main_client_bt8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:text="同屏接收端 udp 8 gl surfaceview " />
+
+        <Button
+            android:id="@+id/main_client_bt9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:text="同屏接收端 udp 9 opengl " />
+
+        <Button
+            android:id="@+id/main_client_bt10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:text="同屏接收端 ijkplayer TCP " />
+
+        <Button
+            android:id="@+id/main_client_bt11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:text="同屏接收端 ijkplayer UDP " />
+    </LinearLayout>
+</ScrollView>
