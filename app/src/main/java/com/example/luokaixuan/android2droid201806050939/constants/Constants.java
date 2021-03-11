@@ -16,7 +16,9 @@ public class Constants {
 
     public static final int FPS = 30;
     //    public static final int BITRATE = 1024000 * 10;
-    public static final int BITRATE = (int) (PHONE_WIDTH * PHONE_HEIGHT) * 6;
+//    1280 x 720 (总像素) x 12bit(每个像素占用12bit) x 25(一秒25帧) = 276480000 bits = 32.96  x 1024 x 1024 x8
+    public static final int COLOR_BIT = 12;
+    public static final int BITRATE = (int) (PHONE_WIDTH * PHONE_HEIGHT) * COLOR_BIT * FPS;
 
     public static final int KEY_I_FRAME_INTERVAL = 1;
 

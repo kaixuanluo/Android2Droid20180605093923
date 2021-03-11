@@ -202,20 +202,22 @@ public class ServiceMainActivity2Udp extends ScreenOnActivity {
                 // no output available yet
                 Log.d(TAG, "no output from encoder available");
                 continue;
-            } else if (encoderStatus == MediaCodec.INFO_OUTPUT_BUFFERS_CHANGED) {
-                // not expected for an encoder
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
-                    encoderOutputBuffers = encoder.getOutputBuffers();
-                }
-                Log.d(TAG, "encoder output buffers changed");
-            } else if (encoderStatus == MediaCodec.INFO_OUTPUT_FORMAT_CHANGED) {
-                // not expected for an encoder
-                MediaFormat newFormat = null;
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
-                    newFormat = encoder.getOutputFormat();
-                }
-                Log.d(TAG, "encoder output format changed: " + newFormat);
-            } else if (encoderStatus < 0) {
+            }
+//            else if (encoderStatus == MediaCodec.INFO_OUTPUT_BUFFERS_CHANGED) {
+//                // not expected for an encoder
+//                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+//                    encoderOutputBuffers = encoder.getOutputBuffers();
+//                }
+//                Log.d(TAG, "encoder output buffers changed");
+//            } else if (encoderStatus == MediaCodec.INFO_OUTPUT_FORMAT_CHANGED) {
+//                // not expected for an encoder
+//                MediaFormat newFormat = null;
+//                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+//                    newFormat = encoder.getOutputFormat();
+//                }
+//                Log.d(TAG, "encoder output format changed: " + newFormat);
+//            }
+            else if (encoderStatus < 0) {
                 Log.e(TAG, "encoderStatus < 0");
                 continue;
             } else {
