@@ -18,6 +18,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <service android:name=".ForegroundService"/>
         <activity
             android:name=".ClientMainActivity10TcpIjkplayer"
             android:label="@string/title_activity_client_main_activity10_ijkplayer"
