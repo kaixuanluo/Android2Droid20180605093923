@@ -8,7 +8,7 @@ public class Constants {
 
     public static final int PHONE_WIDTH = (int) (1080 / 4);
 
-    public static final int PHONE_HEIGHT = (int) (2400 / 4);
+    public static final int PHONE_HEIGHT = (int) (1920 / 4);
 
     public static final int CAR_PAD_WIDTH = PHONE_WIDTH;
 
