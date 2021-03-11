@@ -6,9 +6,9 @@ package com.example.luokaixuan.android2droid201806050939.constants;
 
 public class Constants {
 
-    public static final int PHONE_WIDTH = (int) (720 / 2);
+    public static final int PHONE_WIDTH = (int) (1080 / 4);
 
-    public static final int PHONE_HEIGHT = (int) (1280 / 2);
+    public static final int PHONE_HEIGHT = (int) (2400 / 4);
 
     public static final int CAR_PAD_WIDTH = PHONE_WIDTH;
 

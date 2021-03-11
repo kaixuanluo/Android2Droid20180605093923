@@ -162,7 +162,8 @@ public class MainActivity extends ScreenOnActivity {
             getSupportColorFormat();
         }
 
-        startForegroundService2();
+        Intent intent = new Intent(this, ForegroundService.class);
+        this.startService(intent);
     }
 
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
@@ -224,44 +225,4 @@ public class MainActivity extends ScreenOnActivity {
 //        System.out.println("MainActivity width : " + widthPixels);
 //    }
 
-    private String notificationId = getClass().getSimpleName();
-    private String notificationName = getClass().getSimpleName();
-
-    private void startForegroundService2() {
-
-        NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-
-        //创建NotificationChannel
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-
-            NotificationChannel channel = new NotificationChannel(notificationId, notificationName, NotificationManager.IMPORTANCE_HIGH);
-
-            notificationManager.createNotificationChannel(channel);
-
-        }
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            Intent intent = new Intent(this, ForegroundService.class);
-            this.startForegroundService(intent);
-        }
-//        this.startForeground(1, getNotification());
-
-    }
-
-//    private Notification getNotification() {
-//
-//        Notification.Builder builder = new Notification.Builder(this)
-//                .setSmallIcon(R.mipmap.ic_launcher)
-//                .setContentTitle("喵驾音乐")
-//                .setContentText("喵驾音乐正在运行...");
-//        //设置Notification的ChannelID,否则不能正常显示
-//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-//            builder.setChannelId(notificationId);
-//        }
-//
-//        Notification notification = builder.build();
-//        return notification;
-//
-//    }
 }
